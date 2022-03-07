@@ -10,6 +10,11 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="../js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <style>
         @charset "UTF-8";
 
@@ -137,14 +142,59 @@
             min-width: 550px;
             margin: auto;
         }
-
-        
     </style>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white d-flex justify-content-center m-3">
+          <div class="container-fluid w-75 d-flex align-items-center">
+            <a class="ml-2 navbar-brand" href="../index.html">
+              <img class="w-75" src="../img/banner_RG_web.png" alt="" height="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link link-dark" aria-current="page" href="horarios.html">Horarios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-secondary" href="#">Pasen</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-secondary" href="#">Convalidaciones</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle link-secondary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Otros
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Itinerarios formativos</a></li>
+                    <li><a class="dropdown-item" href="#">Bolsa de empleo</a></li>
+                    <li><a class="dropdown-item" href="#">Instancia</a></li>
+                    <li><a class="dropdown-item" href="#">Contacto</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-secondary" href="#">Convocatorias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-secondary" href="#">FCT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-secondary" href="contacto.html">Contacto</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <hr>
+  </header>
 
-    <div class="border-top py-4">
+    <div>
         <section class="contenido-principal mt-5 w-75 m-auto mt-5">
             <div class="container">
                 <div class="row">
@@ -244,11 +294,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
 
                     <div class="col-6 border-end border-primary my-3 py-4 px-5 d-flex flex-column gap-3">
@@ -260,7 +305,7 @@
                                     <li> <img src="../img/carrusel1.jpg" alt="pista">"/></li>
                                     <li> <img src="../img/carrusel1.jpg" alt="pista">"/></li>
                                     <li> <img src="../img/carrusel1.jpg" alt="pista">"/></li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -271,12 +316,9 @@
         </section>
 
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     <script>
         function HoverCarousel(elm, settings) {
             this.DOM = {
@@ -286,8 +328,8 @@
 
             this.containerWidth = 0;
             this.scrollWidth = 0;
-            this.posFromLeft = 0;    // Stripe position from the left of the screen
-            this.stripePos = 0;    // When relative mouse position inside the thumbs stripe
+            this.posFromLeft = 0; // Stripe position from the left of the screen
+            this.stripePos = 0; // When relative mouse position inside the thumbs stripe
             this.animated = null;
             this.callbacks = {}
 
@@ -340,7 +382,8 @@
                     this.scrollPos = this.scrollWidth - this.containerWidth
 
                 this.DOM.wrap.scrollLeft = this.scrollPos
-                this.DOM.scope.style.setProperty('--scrollWidth', (this.containerWidth / this.scrollWidth) * 100 + '%');
+                this.DOM.scope.style.setProperty('--scrollWidth', (this.containerWidth / this.scrollWidth) * 100 +
+                    '%');
                 this.DOM.scope.style.setProperty('--scrollLleft', (this.scrollPos / this.scrollWidth) * 100 + '%');
 
                 // lock UI until mouse-enter scroll is finihsed, after aprox 200ms
@@ -376,15 +419,16 @@
 
                 // update scrollbar
                 if (this.scrollPos < (this.scrollWidth - this.containerWidth))
-                    this.DOM.scope.style.setProperty('--scrollLleft', (this.scrollPos / this.scrollWidth) * 100 + '%');
+                    this.DOM.scope.style.setProperty('--scrollLleft', (this.scrollPos / this.scrollWidth) * 100 +
+                        '%');
 
                 // check if element has reached an edge
                 this.prevMore = this.DOM.wrap.scrollLeft > 0
                 this.nextMore = this.scrollWidth - this.containerWidth - this.DOM.wrap.scrollLeft > 5
 
                 this.DOM.scope.setAttribute('data-at',
-                    (this.prevMore ? 'left ' : ' ')
-                    + (this.nextMore ? 'right' : '')
+                    (this.prevMore ? 'left ' : ' ') +
+                    (this.nextMore ? 'right' : '')
                 )
             }
         }
@@ -392,6 +436,7 @@
         var carouselElm = document.querySelector('.carousel')
         new HoverCarousel(carouselElm)
     </script>
+     <script src="../js/bootstrap.bundle.js"></script>
 
 </body>
 
